@@ -141,6 +141,17 @@ export const constantRouterMap = [
     ]
   },
 
+  {
+    path: 'donate',
+    component: Layout,
+    children: [
+      {
+        path: 'https://panjiachen.gitee.io/vue-element-admin-site/zh/donate/',
+        meta: { title: 'Donate', icon: 'donate' }
+      }
+    ]
+  },
+
   { path: '*', redirect: '/404', hidden: true }
 ]
 
