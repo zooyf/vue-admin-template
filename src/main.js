@@ -15,9 +15,16 @@ import store from './store'
 import '@/icons' // icon
 import '@/permission' // permission control
 
+import VueAnalytics from 'vue-analytics'
+
 Vue.use(ElementUI, { locale })
 
 Vue.config.productionTip = false
+
+Vue.use(VueAnalytics, {
+  id: 'UA-109340118-1',
+  router
+})
 
 new Vue({
   el: '#app',
