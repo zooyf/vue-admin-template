@@ -16,7 +16,7 @@ git clone https://github.com/PanJiaChen/vue-admin-template.git
 npm install
 
 # Serve with hot reload at localhost:9528
-npm run dev
+npm run serve
 
 # Build for production with minification
 npm run build
