@@ -9,6 +9,14 @@ NProgress.configure({ showSpinner: false })// NProgress configuration
 
 const whiteList = ['/login'] // 不重定向白名单
 router.beforeEach((to, from, next) => {
+  // 百度统计
+  var _hmt = window._hmt
+  if (_hmt) {
+    if (to.path) {
+      _hmt.push(['_trackPageview', to.fullPath])
+    }
+  }
+
   NProgress.start()
   if (getToken()) {
     if (to.path === '/login') {
